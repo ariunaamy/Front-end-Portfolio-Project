@@ -1,2 +1,2 @@
-# portfolio
+# Portfolio
 Front-end Portfolio Project
