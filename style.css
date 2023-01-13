@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Press+Start+2P&display=swap');
+body {
+    background-color: #fff1e5;
+    text-align: center;
+    margin: 0;
+}
+
+/* header */
+.header {
+    background-color: rgb(12, 3, 2);
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    margin: 0;
+}
+
+h1, #header_p, form {
+    margin: 0;
+}
+
+.logo {
+    color:rgb(251, 238, 238);
+    font-family: 'Play', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 150%;
+    text-align: left;
+    padding: 3%;
+
+}
+
+#header_p {
+    color:rgb(255, 255, 255);
+    font-family: 'Play', sans-serif;
+    padding: 5%;
+}
+
+.search {
+    padding-bottom: 10%;
+}
+
+
+h4 {
+    font-family: 'Play', sans-serif; 
+    color:rgb(30, 23, 23);
+    font-weight: 400;
+    margin: 0;
+    padding: 5%;
+}
+
+/* lists */
+
+.main_row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 1%;
+    margin-right: 1%;
+   
+}
+
+/* each of three lists  */
+
+
+.list {
+    
+    margin: 5% 2.5% 2%;
+    height: 85%;
+    text-align: center;
+    padding-bottom: 400px;
+    background-color: white;
+    box-shadow: 0 0 5px #c5c5c5;
+    border-radius: 10px;
+   
+}
+
+.instruction {
+  font-family:'Play', sans-serif;
+  color:rgb(190, 188, 188);
+}
+
+button, .submit {
+    background-color: #ffffff;
+    border-color: #d3d1d9;
+}
+
+button:hover, .submit:hover {
+    background-color: #000000;
+    color: white;
+
+}
+.bookCard {
+    margin: 5%;
+    padding: 15%;
+    background-color: white;
+    height: 85%;
+    box-shadow: 0 0 5px #c5c5c5;
+    border-radius: 10px;
+}
+
+/* displays only upon call */
+ .hidden {
+    visibility: hidden;
+}
+
+.bookName {
+    margin-bottom: 1%;
+}
+
+.author {
+    font-size: small;
+    font-style: italic;
+    margin: 1%;
+    margin-bottom: 2%;
+}
+
+#addLists {
+cursor: pointer;
+}
+
+.description {
+font-size: medium;
+}
+
+.thumbnail {
+   float:left;
+   margin: 2% 2% 0 0;
+}
+
+
+

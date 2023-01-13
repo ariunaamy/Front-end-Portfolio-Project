@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <title>myBooks</title>
+</head>
+<body>
+<!-- this is Header -->
+<div class="header">
+  <p class="logo">LABRARI</p>
+  <p id="header_p">Create lists of Books you <i>read, currently reading, wish to read</i></p> 
+</div>
+<!-- end of Header -->
+     
+  <div class="main_row">
+    <!-- three lists of books -->
+    <div class="lists">
+        <!-- 'previously' -->
+        <div class="list previous">
+            <h4>Have Read</h4>
+            <p class="instruction one"><i>make a monthly list of books<br>you have read</i><br>&#x1F62E;&#x200D;&#x1F4A8</p>
+            <ul class="firstList">
+            </ul>
+        </div>
+        <!-- 'currently' -->
+        <div class="list currently">
+            <h4>Currently reading</h4>
+            <p class="instruction two"><i>make a list of books<br> you are reading now</i><br>&#129299</p>
+            <ul class="secondList">
+            </ul>
+        </div>
+        <!-- 'future' -->
+        <div class="list future">
+            <h4>Future Reads</h4>
+            <p class="instruction three"><i>make a list of book<br>you want to read</i><br>&#9825</p>
+            <ul class="thirdList">
+            </ul>
+        </div>
+    </div> 
+    <!-- end of three lists div -->
+
+     <!-- book Card -->
+    <div class="bookCard">
+        <!-- searhc form  -->
+        <form class="searchForm">
+            <input type="text" class="storage" placeholder="type a book name">
+            <input type="submit" class="submit" value="find a book">
+        </form>
+        <!-- "hidden by default" -->
+        <div class="hidden">
+          <h2 class="bookName"></h2>
+          <p class="author"></p>
+
+
+          <!-- "select list" form -->
+          
+            <select id="addLists">
+              <!-- <option  value="" disabled selected hidden>choose list</option> -->
+              <option id="zero" value="have_read">Have Read</option>
+              <option id="one" value="currently_reading">Currently Reading</option>
+              <option id="two" value="future_reads">Future Reads</option>
+            </select>
+            <button type="submit">Add</button>
+          
+          <hr>
+          <img class="thumbnail"/>
+          <p class="description"></p>
+       </div>
+       <!-- end of "hidden"-->
+    </div> 
+    <!-- end of bookCard div   -->
+  </div>  
+</body>
+</html>
+
