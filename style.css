@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Press+Start+2P&family=Roboto:wght@500&family=Slabo+27px&display=swap');
 body {
-    background-color: #fff1e5;
+    background-color: #4a4751;
     text-align: center;
     margin: 0;
+    /* text-align: left; */
 }
 
 /* header */
 .header {
-    background-color: rgb(12, 3, 2);
+    /* background-color: rgb(12, 3, 2); */
     display: grid;
     width: 100%;
     grid-template-columns: 50% 50%;
     margin: 0;
+    margin: 0;
+    background-color: #0a0a0a;
 }
 
 h1, #header_p, form {
@@ -19,32 +22,64 @@ h1, #header_p, form {
 }
 
 .logo {
-    color:rgb(251, 238, 238);
-    font-family: 'Play', sans-serif;
-    letter-spacing: 1.5px;
-    font-size: 150%;
+    font-size: 40px;
     text-align: left;
-    padding: 3%;
-
+    color: #cac7d4;
+    width: 100%;
+    margin-left: 45px;
+   
 }
 
 #header_p {
     color:rgb(255, 255, 255);
     font-family: 'Play', sans-serif;
-    padding: 5%;
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+    
+
+
+.searchForm {
+    background-color: #edebf2;
+    padding-bottom: 50px;
+    padding: 25px;
+   font-family: 'Roboto', sans-serif;
+   box-shadow: 0 0 5px #c5c5c5;
+   border-radius: 10px;
 }
 
-.search {
-    padding-bottom: 10%;
+.submit {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: medium;
+} 
+input {
+    height: 30px;
+    font-size: larger;
 }
 
+.hidden {
+   padding-top: 30px;
+}
+.bookName {
+    padding-top: 0px;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+select {
+    float: left;
+}
 
 h4 {
-    font-family: 'Play', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     color:rgb(30, 23, 23);
-    font-weight: 400;
     margin: 0;
     padding: 5%;
+    box-shadow: 0 0 5px #c8bbf7;
+    background-color: rgb(233, 234, 245);
+    font-weight: 900;
+    font-size: medium;
 }
 
 /* lists */
@@ -58,7 +93,7 @@ h4 {
 .lists {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 1%;
+    margin-left: 5%;
     margin-right: 1%;
    
 }
@@ -72,9 +107,11 @@ h4 {
     height: 85%;
     text-align: center;
     padding-bottom: 400px;
-    background-color: white;
+    /* background-color: white; */
     box-shadow: 0 0 5px #c5c5c5;
     border-radius: 10px;
+    background-image: url(images/chalkboard.jpeg);
+    background-size: cover;
    
 }
 
@@ -82,6 +119,18 @@ h4 {
   font-family:'Play', sans-serif;
   color:rgb(190, 188, 188);
 }
+
+li {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: large;
+    text-align: left;
+    margin: 20px 0px 20px;
+    padding: 20px 10px 20px;
+    color: white;
+}
+
+
+
 
 button, .submit {
     background-color: #ffffff;
@@ -96,10 +145,11 @@ button:hover, .submit:hover {
 .bookCard {
     margin: 5%;
     padding: 15%;
-    background-color: white;
-    height: 85%;
+    background-image: url(images/bookpaper.jpeg);
+    background-size: cover;
+    height: 90%;
     box-shadow: 0 0 5px #c5c5c5;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 /* displays only upon call */
@@ -112,7 +162,7 @@ button:hover, .submit:hover {
 }
 
 .author {
-    font-size: small;
+    font-size: medium;
     font-style: italic;
     margin: 1%;
     margin-bottom: 2%;
@@ -124,6 +174,7 @@ cursor: pointer;
 
 .description {
 font-size: medium;
+font-size: large;
 }
 
 .thumbnail {
