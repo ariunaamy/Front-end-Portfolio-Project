@@ -11,14 +11,24 @@ body {
     /* background-color: rgb(12, 3, 2); */
     display: grid;
     width: 100%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 20% 30% 50%;
     margin: 0;
     margin: 0;
     background-color: #0a0a0a;
 }
 
-h1, #header_p, form {
-    margin: 0;
+a {
+    color: #ffffff;
+    font-size: large;
+    padding: 0px;
+    display: inline-block;
+    margin: 10% 10%;
+    
+}
+
+a:hover {
+    color: #c8bbf7;
+    font-size: larger;
 }
 
 .logo {
@@ -27,25 +37,30 @@ h1, #header_p, form {
     color: #cac7d4;
     width: 100%;
     margin-left: 45px;
-   
+    padding: 0px;
 }
 
-#header_p {
+
+
+.quote {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin: 30px 40px 30px 0px;
     color:rgb(255, 255, 255);
     font-family: 'Play', sans-serif;
-    padding-top: 40px;
-    padding-bottom: 0px;
+    font-style: italic;
+    padding: 0;
 }
-    
 
-
-.searchForm {
-    background-color: #edebf2;
-    padding-bottom: 50px;
-    padding: 25px;
-   font-family: 'Roboto', sans-serif;
-   box-shadow: 0 0 5px #c5c5c5;
-   border-radius: 10px;
+#quote {
+    float: right;
+}
+#author {
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 .submit {
@@ -150,6 +165,15 @@ button:hover, .submit:hover {
     height: 90%;
     box-shadow: 0 0 5px #c5c5c5;
     border-radius: 3px;
+}
+
+.searchForm {
+    background-color: rgb(233, 234, 245);
+    padding-bottom: 50px;
+    padding: 25px;
+   font-family: 'Roboto', sans-serif;
+   box-shadow: 0 0 5px #c5c5c5;
+   border-radius: 10px;
 }
 
 /* displays only upon call */

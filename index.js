@@ -1,4 +1,3 @@
-
 // setting up veriables for html elements 
 const searchForm = document.querySelector(".searchForm");
 const base_URL = "https://www.googleapis.com/books/v1/volumes?q=";
@@ -22,6 +21,26 @@ let secondList = listOfItems[1];
 let thirdList = listOfItems[2];
 
 
+// API call upon response 
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'c48005b3demshc585357590941dfp18ead2jsnba6e48e92bac',
+		'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+	}
+};
+
+fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
+	.then(response => response.json())
+	.then(result => {
+    console.log(result)
+   
+    document.getElementById("quote").innerHTML = '"' + result.content + '"'
+    document.getElementById("author").innerHTML = "- " + result.originator.name
+    
+  })
+	.catch(err => console.error(err));
+
 
 //Search Book event listner 
 searchForm.addEventListener("submit", (event)=>{
@@ -31,6 +50,7 @@ searchForm.addEventListener("submit", (event)=>{
   searchForm.reset();
  }
 )
+
 
 // function accessing Google Books API
 function getBookInfo(book) {
