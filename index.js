@@ -21,7 +21,7 @@ let secondList = listOfItems[1];
 let thirdList = listOfItems[2];
 
 
-// API call upon response 
+// quotes API call upon response 
 const options = {
 	method: 'GET',
 	headers: {
@@ -35,21 +35,38 @@ fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
 	.then(result => {
     console.log(result)
    
-    document.getElementById("quote").innerHTML = '"' + result.content + '"'
+    document.getElementById("quote_text").innerHTML = '"' + result.content + '"'
     document.getElementById("author").innerHTML = "- " + result.originator.name
     
   })
 	.catch(err => console.error(err));
 
 
+
 //Search Book event listner 
 searchForm.addEventListener("submit", (event)=>{
   event.preventDefault();
   const book = document.querySelector('input').value;
+  bookCard.style.backgroundImage = "url(images/bookpaper.jpeg)"
+  bookCard.style.backgroundSize = "cover";
+  bookCard.style.height = "fit-content";
+  searchForm.style.marginTop = "20px";
+  searchForm.style.marginBottom = "5px";
+  searchForm.style.backgroundColor = "none";
+  document.querySelector(".submit").style.color = "black";
+  document.querySelector(".submit").style.border = "2px solid black"
+
+  
+  document.querySelector(".slogan").remove();
+ 
+ 
+
   getBookInfo(book); 
   searchForm.reset();
  }
 )
+
+// height:fit-content;
 
 
 // function accessing Google Books API
@@ -154,9 +171,6 @@ if (localStorage.length > 0){
     li.innerHTML = Object.values(storage[2][i])[0]
   }
 }
-
-
-
 
 
 

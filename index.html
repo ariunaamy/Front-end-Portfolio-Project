@@ -8,16 +8,21 @@
     <script defer src="index.js"></script>
     <title>Labrari</title>
 </head>
+
 <body>
 <!-- this is Header -->
-<div class="header">
-  <p class="logo">LABRARI</p>
-  <a href="about.html">about</a>
+<header>
+  <div class="logo_and_nav">
+    <p class="logo" href="index.html">LABRARI</p>
+    <nav>
+      <a href="about.html">about</a>
+  </nav>
+  </div>
  <div class="quote">
-  <p id="quote"></p>
+  <p id="quote_text"></p>
   <p id="author"></p>
  </div>
-</div>
+</header>
 <!-- end of Header -->
      
   <div class="main_row">
@@ -50,8 +55,9 @@
      <!-- book Card -->
     <div class="bookCard">
         <!-- searhc form  -->
+        <p class="slogan">Simple Lists for Complex Readers</p> 
         <form class="searchForm">
-            <input type="text" class="storage" placeholder="type a book name">
+            <input type="search" class="search_input" placeholder="type a book name" size="35" required>
             <input type="submit" class="submit" value="find a book">
         </form>
         <!-- "hidden by default" -->
@@ -69,7 +75,6 @@
               <option id="two" value="future_reads">Future Reads</option>
             </select>
             <button type="submit">Add</button>
-          
           <hr>
           <img class="thumbnail"/>
           <p class="description"></p>
@@ -78,6 +83,9 @@
     </div> 
     <!-- end of bookCard div   -->
   </div>  
+  <footer>
+    <p>© 2023 Ariunaa Myagmar</p>
+  </footer>
 </body>
 </html>
 
