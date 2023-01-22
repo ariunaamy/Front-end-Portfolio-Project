@@ -1,125 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Press+Start+2P&family=Roboto:wght@500&family=Slabo+27px&display=swap');
+
 body {
     background-color: #4a4751;
     text-align: center;
     margin:0;
     padding:0;
     height:100%;
+    width: 100%;
     position: relative;
 }
 
-/* Header Elements */
+/* Header Element */
 header {
-    /* background-color: rgb(12, 3, 2); */
     background-color: #0a0a0a;
     width: 100%;
-    height:fit-content;
+    height: 10%;
     margin: 0; 
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    
-    
 }
 
-.header_frame {
- border: 1px solid white;
- width: 200%;
-}
-
-.logo_and_nav {
-    height: 150px;
-    height:fit-content;
-    float: left;
-    
-}
-
+/* Header Element */
 .logo {
-    font-size: 40px;
+    font-size: 35px;
     text-align: left;
-    color: rgb(184, 180, 221);
-    text-shadow: 0 0 3px #f80505;
-    width: 100%;
-    margin-left: 45px;
-    padding: 0px;
-  
+    color: rgb(255, 255, 255);
+    padding-bottom: 0;
+    text-shadow: 0 0 10px #9264a4;
 }
 
-/* Navigation Bar  */
-nav {
-    float: left;
-    padding: 0px;
-    margin: 20px 0px 30px 45px;  
-}
-
-a {
+/* Header Element - Navigation Bar  */
+nav, a {
     color: white;
     font-size: large;
-    padding: 0px;
+    margin: 10px; 
+    float: left;
 }
 
+.logo, nav {
+ padding-left: 15px;
+}
+
+/* Header Element */
 a:hover {
     color: #c8bbf7;
     font-size: larger;
 }
-/* Navigation Bar End */
 
-/* Header Slogan */
-.header_slogan {
-    color: rgb(184, 180, 221);
-    text-shadow: 0 0 3px #989895;
-    float: right;
-    padding: 0px;
-    margin-right: 45px;
-    width: 100%;
-    font-family: 'Play', sans-serif;
-    font-style: italic;
-    font-size: x-large;
-    font-family: 'Roboto', sans-serif;
-    float: left;
-  
-}
-
-/* Header Slogan End  */
-
-/* End of About Header Elements  */
 
 /* "Random Quotes" API Elements */
 .quote {
-    float: left;
-    display: grid;
-    grid-template-rows: 1fr;
-    margin: 30px 0px 30px 0px;
+    font-size: smaller;
     color:rgb(255, 255, 255);
     font-family: 'Play', sans-serif;
     font-style: italic;
-    padding: 0;
-    text-align: center;
-    width: 600px;
-}
-
-#quote_text {
-    float: right;
-    padding: 0px;
-}
-
-#author {
+    height:fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 50px;
     text-align: right;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 0px;
-    margin-bottom: 5px;
+    
 }
-/* "Random Quotes" API Ends Here */
 
-
-/* Search Form */
-
-/* "find a book" button  */
-
-submit:hover {
-    background-color: #ab9ce2;
+#quote_text, #author {
+    margin: auto;
+    width: 100%;
+    padding: auto;
 }
+
 
 /* input box  */
 input {
@@ -143,6 +93,7 @@ select {
 
 /* Main Row: Lists and Book Card */
 .main_row {
+    margin: auto;
     display: grid;
     grid-template-columns: 50% 50%;
     position: relative;
@@ -154,11 +105,11 @@ select {
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: 5%;
     margin-right: 1%;
-   
 }
 
 /* Each of Three Lists  */
 .list {
+    /* background-color: antiquewhite; */
     margin: 5% 2.5% 2%;
     height: 60%;
     position: relative;
@@ -166,7 +117,6 @@ select {
     padding-bottom: 400px;
     box-shadow: 0 0 5px #c5c5c5;
     border-radius: 10px;
-    background-image: url(images/chalkboard.jpeg);
     background-size: cover;
 }
 
@@ -182,45 +132,12 @@ h4 {
     font-size: medium;
 }
 
-.card {
-    width: fit-content;
-    margin: 5%;
-    /* box-shadow: 0 0 5px #c5c5c5;
-    border-radius: 3px; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-right: 40px;
-}
+
 
 h2 {
     color: white;
 }
 
-.why_labrari_h2, .about_text, .img_about {
-    float: left;
-} 
-
-.why_labrari_h2 {
-    color: #ffffff;
-    font-family: 'Fredericka the Great', cursive;
-    text-align: center;
-    padding: 0px;
-}
-
-.about_text {
-    color: rgb(0, 0, 0);
-    background-color: #ebe4f8;
-    padding: 40px;
-    float: left; 
-    width: 80%;
-    font-weight: 300;
-    font-family: 'Slabo 27px', serif;
-    text-align: left;
-}
-
-.img_about {
-    float: left;
-}
 
 /* Italic Pale Instructions  */
 .instruction {
@@ -240,7 +157,7 @@ li {
 
 /* Book Card */
 .bookCard {
-    width: 700px;
+    background-size: cover;
     margin: 5%;
     background-image: url(images/reading.jpeg);
     box-shadow: 0 0 5px #c5c5c5;
@@ -249,7 +166,7 @@ li {
 }
 
 /* Find a Book button */
-.submit {
+.search_button {
     margin-left: 10px;
     padding: 3px 5px;
     background: none;
@@ -259,18 +176,21 @@ li {
     font-size: medium;
     width: fit-content;
 } 
-
+  
+#addLists {
+    height: 25px;
+    margin: auto;
+    margin-left: 32px;
+}
 /* Add to List Button */
-button {
-    background: none;
+#add_button {
+    margin-left: 0;
     border: 2px solid rgb(0, 0, 0);
-    margin-left: 10px;
-    padding: 3px 5px;
 }
 
 
 /* All Buttins on Hover */
-button:hover, .submit:hover {
+#add_button:hover, .search_button:hover {
     background-color: #ebe4f8;
     color: rgb(0, 0, 0);
     text-decoration: underline;
@@ -325,8 +245,8 @@ width: fit-content;
 
 .thumbnail {
    float:left;
-   margin: 2% 2% 2% 0;
    padding: 10px 0px 0px 40px;
+   margin-right:  5px;
 }
 
 footer {
@@ -343,4 +263,60 @@ footer {
 
 
 
+/* CSS styles exclusive to about.html */
 
+.header_slogan {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #9264a4;
+    padding: auto;
+    margin: auto;
+    font-family: 'Play', sans-serif;
+    font-style: italic;
+    font-size: large;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.header_frame {
+    width: 200%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    background-color: #f9f7fc;
+    width: 800px;
+    height: 1000px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.why_labrari {
+    color: #3f3641;
+    font-family: 'Fredericka the Great', cursive;
+    text-align: center;
+    margin: 15px;
+}
+
+.about_text {
+    color: rgb(0, 0, 0);
+    padding: 40px; 
+    margin: auto;
+    font-size: medium;
+    font-weight: 300;
+    font-family: 'Slabo 27px', serif;
+    text-align: left;
+    font-size: larger;
+}
+
+.align-left {
+    float: left;
+    width: 300px;
+    margin-right: 15px;
+}
+
+.new_features {
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    font-weight: 300;
+    font-family: 'Slabo 27px', serif;
+}

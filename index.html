@@ -58,23 +58,21 @@
         <p class="slogan">Simple Lists for Complex Readers</p> 
         <form class="searchForm">
             <input type="search" class="search_input" placeholder="type a book name" size="35" required>
-            <input type="submit" class="submit" value="find a book">
+            <input type="submit" class="search_button" value="find a book">
         </form>
         <!-- "hidden by default" -->
         <div class="hidden">
           <h2 class="bookName"></h2>
           <p class="author"></p>
 
-
-          <!-- "select list" form -->
-          
+          <!-- "select list" form -->      
             <select id="addLists">
               <!-- <option  value="" disabled selected hidden>choose list</option> -->
               <option id="zero" value="have_read">Have Read</option>
               <option id="one" value="currently_reading">Currently Reading</option>
               <option id="two" value="future_reads">Future Reads</option>
             </select>
-            <button type="submit">Add</button>
+            <button id="add_button" type="submit">Add</button>
           <hr>
           <img class="thumbnail"/>
           <p class="description"></p>

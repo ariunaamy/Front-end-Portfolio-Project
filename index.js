@@ -35,8 +35,8 @@ fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
 	.then(result => {
     console.log(result)
    
-    document.getElementById("quote_text").innerHTML = '"' + result.content + '"'
-    document.getElementById("author").innerHTML = "- " + result.originator.name
+    document.getElementById("quote_text").innerHTML = '"' + result.content + '"';
+    document.getElementById("author").innerHTML = "- " + result.originator.name;
     
   })
 	.catch(err => console.error(err));
@@ -45,22 +45,22 @@ fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
 
 //Search Book event listner 
 searchForm.addEventListener("submit", (event)=>{
-  event.preventDefault();
-  const book = document.querySelector('input').value;
-  bookCard.style.backgroundImage = "url(images/bookpaper.jpeg)"
-  bookCard.style.backgroundSize = "cover";
-  bookCard.style.height = "fit-content";
-  searchForm.style.marginTop = "20px";
-  searchForm.style.marginBottom = "5px";
-  searchForm.style.backgroundColor = "none";
-  document.querySelector(".submit").style.color = "black";
-  document.querySelector(".submit").style.border = "2px solid black"
-
   
-  document.querySelector(".slogan").remove();
- 
- 
+  event.preventDefault();
 
+  const book = document.querySelector('input').value;
+
+  bookCard.style.backgroundImage = "url(images/bookpaper.jpeg)"
+  bookCard.style.height = "1000px";
+
+  document.querySelector(".search_button").style.color = "black";
+  document.querySelector(".search_button").style.border = "2px solid black";
+  document.querySelector(".search_button").style.marginTop = "50px";
+
+  if (bookCard.contains(document.querySelector(".slogan"))){
+  document.querySelector(".slogan").remove();
+  }
+ 
   getBookInfo(book); 
   searchForm.reset();
  }
@@ -83,11 +83,18 @@ fetch(base_URL+ book + api_key)
 function createCard(result){
   hidden.style.visibility = "visible";
 
+  if (!result.items[0].volumeInfo.description){
+    description.innerHTML = `Sorry, the description of ${result.items[0].volumeInfo.title} is currently unavailable.`
+  }
+  else {
+    description.innerHTML = result.items[0].volumeInfo.description;
+  }
+
   bookName.innerHTML = result.items[0].volumeInfo.title
   author.innerHTML = "by " + result.items[0].volumeInfo.authors;
 
-  description.innerHTML = result.items[0].volumeInfo.description;
-
+  //description.innerHTML = result.items[0].volumeInfo.description;
+  
   thumbnail.setAttribute("src", result.items[0].volumeInfo.imageLinks.thumbnail);
   thumbnail.setAttribute("alt", "thumbnail of the book");
 
